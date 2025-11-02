@@ -5,6 +5,13 @@
 
 Проект автоматизированного тестирования для Petstore API (https://petstore.swagger.io). Функции покрывают основные операции CRUD для трёх основных модулей API: Pet (Питомцы), Store (Магазин) и User (Пользователи).
 
+`api` - Http клиенты для разных частей API
+`model` - Модель API
+`test` - Директория с тестами
+`util/data_generators.py` - Генерация данных с помощью Fake
+`config.py` - Конфигурация констант
+`pytest.ini` - Конфигурация pytest
+
 ## Установка
 
 ### Требования
@@ -101,14 +108,10 @@ pytest --alluredir=allure-results
 - `user_edge_cases` - edge cases для User API
 - `boundary` - boundary condition тесты
 
-## Описание тестовых примеров
+## Описание тестов
 
 ### Pet API (test_pet.py)
-Покрытие основных операций с питомцами:
-- **TestPetCreate**: создание питомцев с разными статусами и параметрами
-- **TestPetRead**: получение информации о питомцах, поиск по статусу
-- **TestPetUpdate**: обновление данных питомца
-- **TestPetDelete**: удаление питомцев
+Покрытие основных операций с питомцами
 
 ### Store API (test_store.py)
 Тесты для работы с заказами и инвентарем:
